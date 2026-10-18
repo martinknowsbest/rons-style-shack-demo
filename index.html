@@ -218,7 +218,7 @@ footer a{color:var(--brass);text-decoration:none}
   function update(){
     var p1=prog(heroZone), p2=prog(storyZone);
     var seam=document.getElementById('seamfade');
-    if(seam){var t=Math.min(1,Math.max(0,(p1-.86)/.14));seam.style.opacity=(t*t*(3-2*t)).toFixed(3);}
+    if(seam){var t=Math.min(1,Math.max(0,(p1-.90)/.10));seam.style.opacity=(t*t*(3-2*t)).toFixed(3);}
     var i1=Math.round(p1*(CLIP2_START-2));      /* frames 1..192 */
     var i2=CLIP2_START-1+Math.round(p2*(TOTAL-CLIP2_START)); /* frames 193..432 */
     if(i1!==cur1){cur1=i1;heroImg.src=path(i1);for(var k=1;k<=16;k++){load(i1+k);load(i1-k);}}
